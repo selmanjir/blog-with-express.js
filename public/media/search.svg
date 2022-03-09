@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://www.apple.com/tr/search -->
+<html class="js tr-tr seg-consumer emea tr" lang="tr-TR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=1024">
+    <title>Apple Store Arama Sonuçları - Apple (TR)</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <meta name="format-detection" content="telephone=no">        
+         <meta property="og:url" content="https://www.apple.com/tr/search">
+        <meta property="og:image" content="https://as-images.apple.com/is/og-default?wid=1200&amp;hei=630&amp;fmt=jpeg&amp;qlt=95&amp;.v=1525370171638">
+        <meta name="twitter:site" content="@apple">
+        <meta property="og:title" content="Apple Store Arama Sonuçları">
+        <meta property="og:site_name" content="Apple (TR)">
+        <meta property="og:locale" content="tr_TR">
+        <meta property="og:description" content="Arama sonuçları">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Apple Store Arama Sonuçları">
+        
+      
+      <meta name="robots" content="noindex, nofollow">
+      <link rel="canonical" href="https://www.apple.com/tr/search">
+          <script> document.cookie = "as_sfa=Mnx0cnx0cnx8dHJfVFJ8Y29uc3VtZXJ8aW50ZXJuZXR8MHwwfDE; path=/; domain=apple.com; expires=Wed, 31-Aug-2022 16:22:21 GMT; Secure;"; </script>
+	<script type="application/json" id="metrics">{"config":{"asMetrics":{"dataMule":"v1","enableSendBeacon":["userInteraction"]},"omniture":{"account":["applestoreww"],"trackingServer":"securemetrics.apple.com","linkInternalFilters":["javascript:","store.apple.com","secure.store.apple.com","secure1.store.apple.com","secure2.store.apple.com","epp.apple.com","secure1.epp.apple.com","storeint.apple.com","secure1.storeint.apple.com","www.apple.com","#"],"internalDomains":["store.apple.com","secure.store.apple.com","secure1.store.apple.com","epp.apple.com","storeint.apple.com","downloads.apple.com","downloads.apple.com","www.apple.com"]},"global":{"cookieDomain":"apple.com"}},"data":{"node":"standard/home/search/search_results","currency":"TRY","area":"search","mvt":[],"search":{"searchTerm":"","selectedTab":"explore","categories":{"explore":{"pageNumber":1,"numOfPages":0,"totalCountText":"0 sonuç bulundu","curated":false}}}}}</script>
+    
+    
+        
+
+            <script>
+                     if (/(iPhone|iPod).*OS ([6-9]|[1-9][0-9]).*AppleWebKit.*Mobile.*Safari/.test(navigator.userAgent)) {
+                       var headNode = document.getElementsByTagName("head")[0];
+var sbNode = document.createElement('meta');
+var url = decodeURI("https://www.apple.com/tr/search");
+var ses = "; " + document.cookie;
+var sesParts = ses.split("; s_vi=");
+ses = sesParts.length == 2 ? sesParts.pop().split(";").shift() : '';
+if (ses !== '') {
+    url += url.indexOf('?') >= 0 ? '&' : '?';
+    url += 'ses=' + encodeURI(ses);
+}
+sbNode.name = 'apple-itunes-app';
+sbNode.content = 'app-id=375380948, app-argument=' + url;
+headNode.appendChild(sbNode);
+
+                     }
+                    else if (/(iPad).*OS ([6-9]|[1-9][0-9]).*AppleWebKit.*Mobile.*Safari/.test(navigator.userAgent)) {
+                      var headNode = document.getElementsByTagName("head")[0];
+var sbNode = document.createElement('meta');
+var url = decodeURI("https://www.apple.com/tr/search");
+var ses = "; " + document.cookie;
+var sesParts = ses.split("; s_vi=");
+ses = sesParts.length == 2 ? sesParts.pop().split(";").shift() : '';
+if (ses !== '') {
+    url += url.indexOf('?') >= 0 ? '&' : '?';
+    url += 'ses=' + encodeURI(ses);
+}
+sbNode.name = 'apple-itunes-app';
+sbNode.content = 'app-id=375380948, app-argument=' + url;
+headNode.appendChild(sbNode);
+
+                    }
+            </script>
+
+
+
+    
+
+    
+
+    	<script>
+		window.asUnsupportedBrowserUrl = "https://www.apple.com/tr/shop/unsupported";
+	</script>
+
+
+<script>
+	//replace nojs class with js on html element
+	(function(html){
+		html.className = html.className.replace(/\bnojs\b/,'js')
+	})(document.documentElement);
+</script>
+
+	<link rel="stylesheet" href="./search_files/search-results.css" media="screen, print">
+
+	<link rel="stylesheet" href="./search_files/merch-tools.css" media="screen, print">
+
+	<link rel="stylesheet" href="./search_files/external.css" media="">
+
+	<link rel="stylesheet" href="./search_files/globalelements.css" media="">
+
+	<link rel="stylesheet" href="./search_files/fonts" media="">
+
+
+	<script>
+		window.irOn=true;
+	</script>
+
+    <script>
+window.ECHO_CONFIG = {
+    metadata: {
+        environment: "",
+        sf: "tr",
+        segment: "Consumer",
+        locale: "tr-tr",
+        referer: document.referrer
+    },
+    config: {
+        "app": "com.apple.www.Store",
+        "delaySendingPageViewDataMS": 500,
+        "nonEssentialEventSampleRatePct": 1.0,
+        "performanceMeasurePollingIntervalMS": 1000,
+        "performanceMeasuresToReport": "".split(','),
+        "resourceDisallowedResourceList": "securemetrics.apple.com".split(','),
+        "resourcePollingIntervalMS": 2000,
+        "sendErrors": true,
+        "sendPageViewData": true,
+        "sendResourceData":  true,
+        "url": "https://xp.apple.com/report/2/xp_aos_clientperf"
+    }
+};
+    </script>
+
+	<script src="./search_files/echo-nomodule.min.js.indir" nomodule=""></script>
+	<script src="./search_files/unsupportedBrowser.min.js.indir" nomodule=""></script>
+	<script src="./search_files/echo.min.js.indir" type="module" async=""></script>
+	<script src="./search_files/external.js.indir"></script>
+	<script src="./search_files/react.production.min.js.indir"></script>
+	<script src="./search_files/react-dom.production.min.js.indir"></script>
+	<script src="./search_files/globalelements.js.indir"></script>
+	<script src="./search_files/search-results.js.indir"></script>
+
+
+
+
+
+
+
+    <script>
+    window.chatConfig = {"chat":{"page":[{"name":"WEB_CHAT_COUNTRY","value":"tr"},{"name":"WEB_CHAT_LANGUAGE","value":"tr"},{"name":"WEB_CHAT_ORDERNUMBER","value":null},{"name":"WEB_CHAT_GEO","value":"emea"},{"name":"WEB_CHAT_SEGMENT","value":"consumer"},{"name":"WEB_CHAT_SECTION","value":"product selection"},{"name":"WEB_CHAT_SUBSECTION","value":"search_results"},{"name":"WEB_CHAT_REFER","value":"https://appleid.apple.com/"},{"name":"WEB_CHAT_APP","value":"AOS"},{"name":"WEB_CHAT_PAGE","value":"AOS: home/search/search_results"},{"name":"url","value":"https://contactretail.apple.com"}]}};
+</script>
+
+<script></script>
+
+    
+
+<script>
+		if(!/dssid2/.test(document.cookie) || !/as_dc/.test(document.cookie))
+		{
+			Event.onDomReady(function() {
+				var ie = document.createElement("IMG");
+				ie.src = '/tr/shop/dc';
+				ie.width = ie.height = 1;
+				ie.style.display = "none";
+				ie.alt = "";
+				document.body.appendChild(ie);
+			});
+		}
+</script>
+
+
+    
+
+
+</head>
+
+
+	<body class=" rf-search-results" cz-shortcut-listen="true">
+		    <div class="metrics">
+            <noscript>
+        <img src="https://securemetrics.apple.com/b/ss/applestoreww/1/H.8--NS/0?pageName=No-Script:AOS%3A+home%2Fsearch%2Fsearch_results" height="1" width="1" alt=""/>
+    </noscript>
+
+
+        
+        	<script></script>
+
+
+        
+        
+    <script>
+
+        window.asMetrics.initialize({
+            isHomePage: false
+            ,encryptedStoreId: "wKJ4CA2FU9KFXHDAY"
+            ,evarDataNodesEnabled: true
+
+
+            ,computedPageName: "AOS: home/search/search_results"
+            ,serverName: "w28035"
+            ,hier1: "home/search/search_results"
+            ,characterSetForCountry: "UTF-8"
+            ,currencyCode: "TRY"
+
+
+            ,computedChannel: "AOS: Search"
+                ,searchOriginatingPage: "acs::kb::bk::bk_c40b3380b7bdc44d3ee2adfd45d66198_apde6b0b0b0a (tr-tr)"
+                ,crossSegmentTrackingVariable: "AOS: TR Consumer: home/search/search_results"
+                ,storeSegmentVariable: "AOS: TR Consumer"
+
+
+
+                ,storeFrontId: "800497"
+
+
+
+
+            ,searchTerm: ""
+                ,computedCustomStoreName: "AOS: Turkey Consumer "
+                ,searchPage: true
+
+                ,langAttribute: "tr-tr"
+
+
+
+
+
+        });
+
+    </script>
+
+
+    </div>
+
+
+
+
+<script>
+		if(!/dssid2/.test(document.cookie) || !/as_dc/.test(document.cookie))
+		{
+			Event.onDomReady(function() {
+				var ie = document.createElement("IMG");
+				ie.src = '/tr/shop/dc';
+				ie.width = ie.height = 1;
+				ie.style.display = "none";
+				ie.alt = "";
+				document.body.appendChild(ie);
+			});
+		}
+</script>
+
+
+
+
+		<div id="page">
+			<meta name="ac-gn-store-key" content="SJHJUH4YFCTTPD4F4">
+<meta name="ac-gn-segmentbar-redirect" content="true">
+
+<aside id="ac-gn-segmentbar" class="ac-gn-segmentbar" lang="tr-TR" dir="ltr" data-strings="{ &#39;exit&#39;: &#39;Çıkış&#39;, &#39;view&#39;: &#39;{%STOREFRONT%} Mağazası - Ana Sayfa&#39;, &#39;segments&#39;: { &#39;smb&#39;: &#39;Kurumsal Müşteriler Mağazası - Ana Sayfa&#39;, &#39;eduInd&#39;: &#39;Eğitim Mağazası - Ana Sayfa&#39;, &#39;other&#39;: &#39;Mağaza - Ana Sayfa&#39; } }"></aside>
+<input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+<nav id="ac-globalnav" class="no-js" role="navigation" aria-label="Genel" data-hires="false" data-analytics-region="global nav" lang="tr-TR" dir="ltr" data-www-domain="www.apple.com" data-store-locale="tr" data-store-root-path="/tr" data-store-api="https://www.apple.com/tr/shop/bag/status" data-search-locale="tr_TR" data-search-suggestions-api="/search-services/suggestions/" data-search-defaultlinks-api="/search-services/suggestions/defaultlinks/">
+	<div class="ac-gn-content">
+		<ul class="ac-gn-header">
+			<li class="ac-gn-item ac-gn-menuicon">
+				<a href="https://www.apple.com/tr/search#ac-gn-menustate" role="button" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					<span class="ac-gn-menuanchor-label">Global Nav Menüyü Açın</span>
+				</a>
+				<a href="https://www.apple.com/tr/search#" role="button" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					<span class="ac-gn-menuanchor-label">Global Nav Menüyü Kapatın</span>
+				</a>
+				<label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					</span>
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					</span>
+				</label>
+			</li>
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple " href="https://www.apple.com/tr/" data-analytics-title="apple home" id="ac-gn-firstfocus-small">
+					<span class="ac-gn-link-text">Apple</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+				<div class="ac-gn-bag-wrapper">
+					<a class="ac-gn-link ac-gn-link-bag " href="https://www.apple.com/tr/shop/bag" data-analytics-title="bag" data-analytics-click="bag" aria-label="Alışveriş Çantası" data-string-badge="Alışveriş Çantasındaki ürün sayısı :">
+						<span class="ac-gn-link-text">Alışveriş Çantası</span>
+					</a>
+					<span class="ac-gn-bag-badge" aria-hidden="true" data-analytics-title="bag" data-analytics-click="bag">
+						<span class="ac-gn-bag-badge-separator"></span>
+						<span class="ac-gn-bag-badge-number"></span>
+						<span class="ac-gn-bag-badge-unit">+</span>
+					</span>
+				</div>
+				<span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+			</li>
+		</ul>
+		<div class="ac-gn-search-placeholder-container" role="search">
+			<div class="ac-gn-search ac-gn-search-small">
+				<a id="ac-gn-link-search-small" class="ac-gn-link" href="https://www.apple.com/tr/search" data-analytics-title="search" data-analytics-intrapage-link="" aria-label="apple.com/tr’de arayın">
+					<div class="ac-gn-search-placeholder-bar">
+						<div class="ac-gn-search-placeholder-input">
+							<div class="ac-gn-search-placeholder-input-text" aria-hidden="true">
+								<div class="ac-gn-link-search ac-gn-search-placeholder-input-icon"></div>
+								<span class="ac-gn-search-placeholder">apple.com/tr’de arayın</span>
+							</div>
+						</div>
+						<div class="ac-gn-searchview-close ac-gn-searchview-close-small ac-gn-search-placeholder-searchview-close">
+							<span class="ac-gn-searchview-close-cancel" aria-hidden="true">Vazgeç</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<ul class="ac-gn-list">
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple " href="https://www.apple.com/tr/" data-analytics-title="apple home" id="ac-gn-firstfocus">
+					<span class="ac-gn-link-text">Apple</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-store">
+				<a class="ac-gn-link ac-gn-link-store " href="https://www.apple.com/tr/store" data-analytics-title="store">
+					<span class="ac-gn-link-text">Store</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+				<a class="ac-gn-link ac-gn-link-mac " href="https://www.apple.com/tr/mac/" data-analytics-title="mac">
+					<span class="ac-gn-link-text">Mac</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+				<a class="ac-gn-link ac-gn-link-ipad " href="https://www.apple.com/tr/ipad/" data-analytics-title="ipad">
+					<span class="ac-gn-link-text">iPad</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+				<a class="ac-gn-link ac-gn-link-iphone " href="https://www.apple.com/tr/iphone/" data-analytics-title="iphone">
+					<span class="ac-gn-link-text">iPhone</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+				<a class="ac-gn-link ac-gn-link-watch " href="https://www.apple.com/tr/watch/" data-analytics-title="watch">
+					<span class="ac-gn-link-text">Watch</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-airpods">
+				<a class="ac-gn-link ac-gn-link-airpods " href="https://www.apple.com/tr/airpods/" data-analytics-title="airpods">
+					<span class="ac-gn-link-text">AirPods</span>
+				</a>
+			</li>
+<li class="ac-gn-item ac-gn-item-menu ac-gn-tvhome">
+				<a class="ac-gn-link ac-gn-link-tvhome " href="https://www.apple.com/tr/tv-home/" data-analytics-title="tv and home">
+					<span class="ac-gn-link-text">TV ve Ev</span>
+				</a>
+			</li>			<li class="ac-gn-item ac-gn-item-menu ac-gn-onlyonapple">
+				<a class="ac-gn-link ac-gn-link-onlyonapple " href="https://www.apple.com/tr/services/" data-analytics-title="only on apple">
+					<span class="ac-gn-link-text">Yalnızca Apple’da</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-accessories">
+				<a class="ac-gn-link ac-gn-link-accessories current" href="https://www.apple.com/tr/shop/accessories/all" data-analytics-title="accessories">
+					<span class="ac-gn-link-text">Aksesuarlar</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+				<a class="ac-gn-link ac-gn-link-support " href="https://www.apple.com/tr/support/" data-analytics-title="support">
+					<span class="ac-gn-link-text">Destek</span>
+				</a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+				<a id="ac-gn-link-search" class="ac-gn-link ac-gn-link-search " href="https://www.apple.com/tr/search" data-analytics-title="search" data-analytics-intrapage-link="" aria-label="apple.com/tr’de arayın"></a>
+			</li>
+			<li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+				<div class="ac-gn-bag-wrapper">
+					<a class="ac-gn-link ac-gn-link-bag " href="https://www.apple.com/tr/shop/bag" data-analytics-title="bag" data-analytics-click="bag" aria-label="Alışveriş Çantası" data-string-badge="Alışveriş Çantasındaki ürün sayısı : {%BAGITEMCOUNT%}">
+						<span class="ac-gn-link-text">Alışveriş Çantası</span>
+					</a>
+					<span class="ac-gn-bag-badge" aria-hidden="true" data-analytics-title="bag" data-analytics-click="bag">
+						<span class="ac-gn-bag-badge-separator"></span>
+						<span class="ac-gn-bag-badge-number"></span>
+						<span class="ac-gn-bag-badge-unit">+</span>
+					</span>
+				</div>
+				<span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+			</li>
+		</ul>
+		<aside id="ac-gn-searchview" class="ac-gn-searchview" role="search" data-analytics-region="search">
+			<div class="ac-gn-searchview-content">
+				<div class="ac-gn-searchview-bar">
+					<div class="ac-gn-searchview-bar-wrapper">
+						<form id="ac-gn-searchform" class="ac-gn-searchform" action="https://www.apple.com/tr/search" method="get">
+							<div class="ac-gn-searchform-wrapper">
+								<input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" aria-label="apple.com/tr’de arayın" placeholder="apple.com/tr’de arayın" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-owns="quicklinks suggestions">
+								<input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+								<button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Aramayı Gönder"> </button>
+								<button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Aramayı Temizleyin">
+									<span class="ac-gn-searchform-reset-background"></span>
+								</button>
+							</div>
+						</form>
+						<button id="ac-gn-searchview-close-small" class="ac-gn-searchview-close ac-gn-searchview-close-small" aria-label="Aramayı İptal Et">
+							<span class="ac-gn-searchview-close-cancel" aria-hidden="true">
+								Vazgeç
+							</span>
+						</button>
+					</div>
+				</div>
+				<aside id="ac-gn-searchresults" class="ac-gn-searchresults" data-string-quicklinks="Hızlı Bağlantılar" data-string-suggestions="Önerilen Aramalar" data-string-noresults=""></aside>
+			</div>
+			<button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Aramayı İptal Et">
+				<span class="ac-gn-searchview-close-wrapper">
+					<span class="ac-gn-searchview-close-left"></span>
+					<span class="ac-gn-searchview-close-right"></span>
+				</span>
+			</button>
+		</aside>
+		<aside class="ac-gn-bagview" data-analytics-region="bag">
+			<div class="ac-gn-bagview-scrim">
+				<span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+			</div>
+			<div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+			</div>
+		</aside>
+	</div>
+</nav>
+<div class="ac-gn-blur"></div>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+
+
+			<div class="as-search-wrapper" role="main">
+				<div id="root"></div>
+			</div>
+		
+			<script>
+				window.pageLevelData = window.pageLevelData || {};
+				window.pageLevelData.searchResults = window.pageLevelData.searchResults || {};
+					window.pageLevelData.searchResults.tabList = {"tabs":{"items":[{"index":0,"value":{"tabSearchNoResultsTitleText":"Üzgünüz, hiç sonuç bulunamadı.","isActive":true,"tabLink":{"url":"/tr/search?src=aos&tab=explore","text":"Keşfedin","dataVar":{},"newTab":false,"link":"/tr/search?src=aos&tab=explore"},"key":"explore","tabSearchNoResultsDescText":"Yeni bir arama yapabilir veya önerilerimizi deneyebilirsiniz."},"even":true,"first":true,"position":1,"last":false},{"index":1,"value":{"tabSearchNoResultsTitleText":"Üzgünüz, hiç sonuç bulunamadı.","isActive":false,"tabLink":{"url":"/tr/search?src=aos&tab=accessories","text":"Aksesuarlar","dataVar":{},"newTab":false,"link":"/tr/search?src=aos&tab=accessories"},"key":"accessories","tabSearchNoResultsDescText":"Yeni bir arama yapabilir veya önerilerimizi deneyebilirsiniz."},"even":false,"first":false,"position":2,"last":false},{"index":2,"value":{"tabSearchNoResultsTitleText":"Üzgünüz, hiç sonuç bulunamadı.","isActive":false,"tabLink":{"url":"/tr/search?src=aos&tab=support","text":"Destek","dataVar":{},"newTab":false,"link":"/tr/search?src=aos&tab=support"},"key":"support","tabSearchNoResultsDescText":"Yeni bir arama yapabilir veya önerilerimizi deneyebilirsiniz."},"even":true,"first":false,"position":3,"last":false},{"index":3,"value":{"tabSearchNoResultsTitleText":"Üzgünüz, hiç sonuç bulunamadı.","isActive":false,"tabLink":{"url":"/tr/search?src=aos&tab=retail","text":"Mağaza Bulun","dataVar":{},"newTab":false,"link":"/tr/search?src=aos&tab=retail"},"key":"retail","tabSearchNoResultsDescText":"Mağaza bulmak için şehir, eyalet veya posta kodu girin.\nVeya önerilerimizi kullanın."},"even":false,"first":false,"position":4,"last":true}],"size":4}};
+					window.pageLevelData.searchResults.searchData = {"sortOptions":{"items":[{"displayKey":"İlgi","key":"relevancy","link":"s=relevancy","selected":true},{"displayKey":"Popülerlik","key":"topSellers","link":"s=topSellers","selected":false},{"displayKey":"En Yeniler","key":"newest","link":"s=newest","selected":false},{"displayKey":"Fiyat: Düşükten Yükseğe","key":"priceLH","link":"s=priceLH","selected":false},{"displayKey":"Fiyat: Yüksekten Düşüğe","key":"priceHL","link":"s=priceHL","selected":false}]},"results":{},"pageNumber":1,"numOfPages":0,"numberOfFiltersSelected":0,"selectedTab":"explore","totalCountText":"0 sonuç bulundu","tabs":{"explore":{"displayName":"Keşfedin","url":"/tr/shop/searchresults/internalmvc?find=&src=aos&tab=explore"},"accessories":{"displayName":"Aksesuarlar","url":"/tr/shop/searchresults/internalmvc?find=&src=aos&tab=accessories"},"support":{"displayName":"Destek","url":"/tr/shop/searchresults/internalmvc?find=&src=aos&tab=support"},"retail":{"displayName":"Mağaza Bulun","url":"/tr/shop/searchresults/internalmvc?find=&src=aos&tab=retail"}},"searchBox":{"formAttrsAction":"/tr/search","param":"src=serp","searchResetValue":"Sıfırla"},"suggestions":{"params":{"src":"aos_serp","locale":"tr_TR"},"url":"/search-services/suggestions/"},"searchTerm":"","internalSearchUrl":"/tr/shop/searchresults/internalmvc?find=&sel=explore&src=aos&tab=explore","responseError":false,"hasRecommendations":false,"mobile":false,"ui":{"error":{"noResultsTitle":"Aramanız herhangi bir sonuç vermedi.","noResultsDescription":"Daha fazla sonuç görmek için yukarıdaki sekmeleri kullanın veya başka bir sözcük aramayı deneyin.","noResultsTryNewTitle":"Üzgünüz, hiç sonuç bulunamadı.","noResultsTryNewDescription":"Lütfen farklı bir arama yapmayı deneyin.","noTabResultsDescription":"İstediğiniz seçime uygun hiçbir ürün bulunamadı. Farklı bir ölçüt seçerseniz daha isabetli sonuçlar alabilirsiniz.","noCategoryResultsDescription":"İstediğiniz seçime uygun hiçbir ürün bulunamadı.","errorGettingResultsMessage":"Üzgünüz, bir hata oluştu. Lütfen daha sonra tekrar arama yapmayı deneyin."},"button":{"moreFiltersText":"Daha fazla","lessFiltersText":"Daha az","applyText":"Başvur","cancelText":"İptal","doneText":"Bitti"},"description":{"suggestionsText":"Önerilen Aramalar","quickLinksText":"","previous":"Önceki","color":"Mevcut renkler:","showPanel":"Filtre Panelini Göster","filterText":"Filtrele","resetFilterText":"Sıfırla","sortByText":"Sıralama Ölçütü","paginationText":"/","submit":"Gönder","hidePanel":"Filtre Panelini Gizle","next":"Sonraki"},"state":{"loading":"Yükleniyor…","loaded":"Yükleme tamamlandı.","loadingError":"Sonuçlar yüklenirken hata oluştu."},"selectedFilters":0},"hasResults":false,"hasFilters":false,"showFilters":false,"hasPreviousResults":false,"hasNextResults":false,"searchPage":true,"showPagination":false,"locale":"tr_TR","internalSearchTimeout":90000};
+					window.pageLevelData.eolOverlay = "<div class=\"redirect-notification\">\n    <h2 class=\"redirect-notification-header\"><span>Bir şey mi arıyorsunuz?</span></h2>\n    <div class=\"redirect-notification-body\"><span><p>Biz de &ouml;yle d&uuml;ş&uuml;nd&uuml;k. Aradığınız &uuml;r&uuml;n artık apple.com/tr/’de yer almıyor.</p><p> L&uuml;tfen başka bir &uuml;r&uuml;n aramayı deneyin.</p></span></div>\n    <button type=\"button\" class=\"redirect-notification-button button rect cancel\">\n        <span><span>Tamam</span></span>\n    </button>\n</div>";
+
+				
+
+window.GLOBAL_ASSETS = {
+    open: "A\u00E7",
+    close: "Kapat",
+    top: "\u00DCst",
+    right: "Sa\u011F",
+    bottom: "Alt",
+    left: "Sol",
+    next: "Sonraki",
+    previous: "\u00D6nceki",
+    selected: "Se\u00E7ildi",
+    show: "G\u00F6ster",
+    hide: "Gizle",
+    play: "Oynat",
+    pause: "Duraklat\u0131n",
+    mute: "",
+    unmute: "Sesi a\u00E7",
+    loading: "Y\u00FCkleniyor",
+    fullscreen: "Tam ekran g\u00F6ster",
+    pip: "Resim i\u00E7inde resim g\u00F6ster",
+    airplay: "AirPlay\u2019i g\u00F6ster",
+    captions: "Alt yaz\u0131lar\u0131 g\u00F6ster",
+    showMore: "Daha fazlas\u0131n\u0131 g\u00F6ster",
+    showLess: "Daha az\u0131n\u0131 g\u00F6ster",
+    more: "Daha fazlas\u0131",
+    less: "Daha az",
+    item: "\u00D6\u011Fe",
+    image: "Resim",
+    video: "Video",
+    edit: "D\u00FCzenle",
+    change: "De\u011Fi\u015Ftirin",
+    update: "G\u00FCncelle",
+    add: "Ekle",
+    remove: "Kald\u0131r",
+    save: "Save",
+    cancel: "\u0130ptal",
+    submit: "G\u00F6nder",
+    reset: "S\u0131f\u0131rla",
+    opensNewWindow: "(Yeni pencerede a\u00E7\u0131l\u0131r)",
+    search: "Ara"
+};
+
+
+			</script>
+
+			
+			<div class="rf-search-results-nojs">
+				<div class="rf-search-wrapper" role="main">
+					<div class="rf-serp-search">
+						<div class="rf-serp-search-wrapper">
+							    <div class="as-l-container">
+            <form class="rf-serp-form" action="https://www.apple.com/tr/search">
+                <div class="rf-serp-searchbox" region="search">    
+                    <div class="rf-serp-autocomplete">
+                        <div class="rf-serp-searchbox-wrapper" for="search">
+                            <label class="visuallyhidden">
+                                    <span></span>
+                            </label>
+                            <div class="form-textbox form-textbox-with-button form-textbox-with-righticon">
+                                <input name="find" type="text" class="form-textbox-input rf-serp-search-input form-textbox-entered" value="">
+                                <span class="form-textbox-label" aria-hidden="true"></span>
+                                <div class="rf-serp-textbox-lefticon">
+                                    <button type="submit">
+                                        <span class="form-icons form-icons-search15">
+                                            <span class="visuallyhidden">Submit</span>
+                                        </span>
+                                    </button></div></div></div></div></div></form></div></div></div></div></div></div></body></html>
