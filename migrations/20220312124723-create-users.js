@@ -8,26 +8,18 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
-        type: Sequelize.INTEGER
+      user_name: {
+        type: Sequelize.STRING
       },
       full_name: {
         type: Sequelize.STRING
       },
-      user_name: {
+      password: {
         type: Sequelize.STRING
       },
       email: {
         type: Sequelize.STRING
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
     });
   },
   async down(queryInterface, Sequelize) {

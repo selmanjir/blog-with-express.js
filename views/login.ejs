@@ -24,13 +24,20 @@
             <% } %>
         </div>
         <form action="/login-post" method="POST" class="pt-3">
+            <label for="username">
+                <!-- font awesome icon -->
+                <i class="fas fa-user"></i>
+            </label>
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="email" name="email">
+                <input type="text" class="form-control" placeholder="Kullanıcı adı" name="user_name" required>
             </div>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
             <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="password">
+                <input type="text" class="form-control" name="password" placeholder="Şifre" required>
             </div>
-            <button type="submit" class="btn btn-success rounded-pill">Giriş</button>
+            <button type="submit" value="Login" class="btn btn-success rounded-pill">Giriş</button>
         </form>
     </div>
 </div>

@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
@@ -8,11 +7,11 @@
     "express-session": "^1.17.2",
     "fix": "^0.0.6",
     "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
     "response": "^0.18.0",
     "sequelize": "^6.17.0",
-    "sequelize-cli": "^6.4.1",
-    "uuid": "^8.3.2"
+    "sequelize-cli": "^6.4.1"
   }
 }
