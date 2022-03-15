@@ -1,12 +1,12 @@
 const mysql = require('mysql');
 const express = require('express');
 const session = require('express-session');
-const path = require('path');
-
+const dotenv = require('dotenv').config();
 const app = express();
 
 
-require('dotenv').config();
+const expressLayouts = require('express-ejs-layouts');
+const path = require('path');
 
 app.use(session({
 	secret: 'secret',
@@ -14,18 +14,22 @@ app.use(session({
 	saveUninitialized: true
 }));
 
+// Set template engine
+app.set('view engine', 'ejs');
+app.set('views',path.resolve(__dirname,'./src/views'));
+
+app.use(expressLayouts);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'static')))
 
-// Set template engine
-app.set('view engine', 'ejs');
+
+app.use('/', require('./src/routes/routes'));
+app.use('/', require('./src/routes/auth_router'));
 
 app.use('/', express.static('public'))
 
 // Routes
-app.use('/', require('./routes/routes'));
-app.use('/', require('./routes/loginRoute'));
 
-const PORT = process.env.PORT || 4111;
-app.listen(PORT, console.log("Server has started at port " + PORT))
+app.listen(process.env.PORT, console.log(`Server has started at port ${process.env.PORT}` ))
