@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Ooops Hata </title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Passion+One:900" rel="stylesheet">
+
+<style> 
+
+#notfound {
+  position: relative;
+  height: 250px;
+}
+h2,p {
+    color:red;
+    font-size:25px;
+}
+    
+.notfound {
+  max-width: 710px;
+  width: 100%;
+  padding-left: 190px;
+  line-height: 1.4;
+}
+
+.notfound-404{
+
+	font-size:95px;
+}
+</style>
+
+
+
+
+</head>
+
+<body>
+
+	<div style="margin-top:145px;" id="notfound">
+		<div class="notfound">
+				<!-- '-' kullnılırsa html içeriği '=' kullanılırsa ham veri -->
+				<%-notFound%> 
+			
+			<h2>Veri Tabanından kullanıcı bilgileri onaylanmadı !</h2>
+			<p>'<%=username%>' => kullanıcı adı <br> veya <br> '<%=password%> ' => şifre yanlış </p>
+		</div>
+	</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

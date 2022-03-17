@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+
 const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv').config();
@@ -6,7 +6,6 @@ const app = express();
 
 
 const expressLayouts = require('express-ejs-layouts');
-const path = require('path');
 
 app.use(session({
 	secret: 'secret',
@@ -24,6 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'static')))
 
+//formdan gelen değerlerin okunabilmesi için
+app.use(express.urlencoded({extended : true }))
 
 app.use('/', require('./src/routes/routes'));
 app.use('/', require('./src/routes/auth_router'));
