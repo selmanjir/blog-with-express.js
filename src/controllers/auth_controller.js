@@ -5,6 +5,8 @@ const user = require("../../src/models/user");
 
 const {validationResult} = require('express-validator');
  
+
+
 const login = async (req, res, next) => 	{
     
     res.render('login',{
@@ -41,8 +43,9 @@ const loginPost = async (req ,res, next) => {
 
 const register = async (req, res, next) => 	{
 
-    
+    console.log(req.flash('validation_error'));
     res.render('register',{
+        
         layout: './layout/auth_layout.ejs'
     });
 }
@@ -51,13 +54,10 @@ const registerPost = async (req, res, next) => 	{
     
     const errors  = validationResult(req);
     if (!errors.isEmpty()) {
-        console.log(errors.array());
+        req.flash('validation_error', errors.array());
+        res.redirect('/register') 
     }
-        
-    res.render('register',{
-        layout: './layout/auth_layout.ejs'
-        
-    });
+
 }
 const forget_password = async (req, res, next) => 	{
     
@@ -77,7 +77,7 @@ module.exports = {
     login,
     loginPost,
     register,
-    forget_password,
     registerPost,
+    forget_password,
     forget_password_post
 };

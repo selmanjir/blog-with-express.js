@@ -6,7 +6,7 @@ const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const flash = require ('connect-flash');
 
-
+let test = 0;
 app.use(session( {
 	secret : process.env.SESSION_SECRET,
 	resave : false,
@@ -17,6 +17,10 @@ app.use(session( {
 }));
 
 app.use(flash());
+app.use((req,res,next) => {
+	res.locals.validation_error = req.flash('validation_error');
+	next();
+});
 
 app.use('/', express.static('public'))
 
