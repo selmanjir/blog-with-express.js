@@ -10,9 +10,14 @@ const connection = new Sequelize(
       host: db_configs.development.host,
       dialect: db_configs.development.dialect,
       port : process.env.MYSQL_CONNECTION_STRING,
+      logging : false
     }
   )
   
 if(connection.authenticate())
 console.log('veri tabanına bağlandı');
+else{
+  console.log('veritabanı bağlantısı başarısız');
+}
+
 module.exports = connection

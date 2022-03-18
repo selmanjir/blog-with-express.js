@@ -1,7 +1,21 @@
 {
   "name": "blog-with-express",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selmanjir/blog-with-express.js.git"
+  },
+  "author": "Selman Jir CAN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selmanjir/blog-with-express.js/issues"
+  },
+  "homepage": "https://github.com/selmanjir/blog-with-express.js#readme",
   "dependencies": {
     "body-parser": "^1.19.2",
     "connect-flash": "^0.1.1",
@@ -10,30 +24,15 @@
     "express": "^4.17.3",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.2",
-    "fix": "^0.0.3",
+    "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
-    "response": "^0.1.0",
+    "response": "^0.18.0",
     "sequelize": "^6.17.0",
     "sequelize-cli": "^6.4.1"
-  },
-  "scripts": {
-    "start": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/selmanjir/blog-with-express.js.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/selmanjir/blog-with-express.js/issues"
-  },
-  "homepage": "https://github.com/selmanjir/blog-with-express.js#readme",
-  "description": ""
+  }
 }

@@ -1,41 +1,18 @@
 
 const mysql = require("mysql");
 const config = require("../config/db");
-const user = require("../../src/models/user")
-// login page
+const user = require("../../src/models/user");
+
+const {validationResult} = require('express-validator');
+ 
 const login = async (req, res, next) => 	{
     
     res.render('login',{
         layout: './layout/auth_layout.ejs'
     });
 }
-const register = async (req, res, next) => 	{
-    
-    res.render('register',{
-        layout: './layout/auth_layout.ejs'
-    });
-}
-
-const registerPost = async (req, res, next) => 	{
-    console.log(req.body);
-    res.render('register',{
-        layout: './layout/auth_layout.ejs'
-    });
-}
-const forget_password = async (req, res, next) => 	{
-    
-    res.render('forget_password',{
-        layout: './layout/auth_layout.ejs'
-    });
-}
-const forget_password_post = async (req, res, next) => 	{
-    
-    console.log(req.body);
-    res.render('forget_password',{
-        layout: './layout/auth_layout.ejs'
-    });
-}
 const loginPost = async (req ,res, next) => {
+    
 	const username = req.body.username;
 	const password = req.body.password;
 
@@ -60,6 +37,41 @@ const loginPost = async (req ,res, next) => {
 
 };
 
+
+
+const register = async (req, res, next) => 	{
+
+    
+    res.render('register',{
+        layout: './layout/auth_layout.ejs'
+    });
+}
+
+const registerPost = async (req, res, next) => 	{
+    
+    const errors  = validationResult(req);
+    if (!errors.isEmpty()) {
+        console.log(errors.array());
+    }
+        
+    res.render('register',{
+        layout: './layout/auth_layout.ejs'
+        
+    });
+}
+const forget_password = async (req, res, next) => 	{
+    
+    res.render('forget_password',{
+        layout: './layout/auth_layout.ejs'
+    });
+}
+const forget_password_post = async (req, res, next) => 	{
+    
+    console.log(req.body);
+    res.render('forget_password',{
+        layout: './layout/auth_layout.ejs'
+    });
+}
 
 module.exports = {
     login,

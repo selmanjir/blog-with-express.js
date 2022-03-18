@@ -4,7 +4,7 @@
 // index page
 const home = (req, res) => {
     res.render('index',{
-        layout:'./layout/layout.ejs'
+        layout:'./layout/auth_layout.ejs'
         
     });
 }

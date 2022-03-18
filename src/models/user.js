@@ -2,13 +2,15 @@
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/db');
- 
+
   class User extends Model {}
   User.init({
     username: DataTypes.STRING,
-    fullname: DataTypes.STRING,
+    full_name: DataTypes.STRING,
     password: DataTypes.STRING,
-    email: DataTypes.STRING
+    email: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'user'

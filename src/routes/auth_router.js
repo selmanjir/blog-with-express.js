@@ -1,6 +1,6 @@
 const express = require('express');
 
-
+const middlewares = require('../middlewares/validation_middleware');
 const authController = require('../controllers/auth_controller')
 
 const router = express.Router();
@@ -11,7 +11,7 @@ router.post('/login-post',authController.loginPost)
 
 router.get('/register',authController.register);
 
-router.post('/register',authController.registerPost);
+router.post('/register',middlewares.registerValidate(),authController.registerPost);
 
 router.get('/forget_password',authController.forget_password);
 
