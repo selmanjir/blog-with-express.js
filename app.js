@@ -21,7 +21,7 @@ app.use(session( {
 	saveUninitialized : true,
 	 store: myStore,
 	cookie : {
-	maxAge :1000*60*60
+	maxAge :1000*60
 	} 	
 }));
 // create database table
@@ -30,6 +30,7 @@ myStore.sync();
 app.use(flash());
 app.use((req,res,next) => {
 	res.locals.validation_error = req.flash('validation_error');
+	res.locals.success_message = req.flash('success_message');
 	res.locals.email = req.flash('email');
 	res.locals.username = req.flash('username');
 	res.locals.full_name = req.flash('full_name');

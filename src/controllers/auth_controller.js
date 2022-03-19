@@ -1,10 +1,10 @@
 
 const mysql = require("mysql");
 const config = require("../config/db");
-const user = require("../../src/models/user");
+const user = require("../models/user");
 
 const {validationResult} = require('express-validator');
- 
+
 
 
 const login = async (req, res, next) => 	{
@@ -15,9 +15,9 @@ const login = async (req, res, next) => 	{
 }
 const loginPost = async (req ,res, next) => {
     
-	const username = req.body.username;
-	const password = req.body.password;
-
+    const username = req.body.username;
+    const password = req.body.password;
+    
     let userLog = await user.findOne({
         where: {
             username: username,
@@ -36,13 +36,13 @@ const loginPost = async (req ,res, next) => {
             notFound
         })
     };
-
+    
 };
 
 
 
 const register = async (req, res, next) => 	{
-
+    
     res.render('register',{
         
         layout: './layout/auth_layout.ejs'
@@ -58,9 +58,46 @@ const registerPost = async (req, res, next) => 	{
         req.flash('password', req.body.password);
         req.flash('repassword', req.body.repassword);
         req.flash('full_name', req.body.full_name);
+        
+        
         res.redirect('/register') 
     }
+    else {
+        try {
+            const _user = await user.findOne({
+                where : {
+                    email : req.body.email}
+            });
+            
+            if (_user) {
+                req.flash('validation_error', [{msg : "Bu mail kullanımda"}]);
+                req.flash('email', req.body.email);
+                req.flash('username', req.body.username);
+                req.flash('password', req.body.password);
+                req.flash('repassword', req.body.repassword);
+                req.flash('full_name', req.body.full_name);
+                
+                res.redirect('/register')
+                console.log("email hatası çalıştı");
+            }else{
+                const newUser = new user({
+                    email : req.body.email,
+                    username : req.body.username,
+                    full_name : req.body.full_name,
+                    password : req.body.password
+                });
+                //veri tabanına kaydolması için.
+                await newUser.save();
+                console.log("kayıt çalıştı");
 
+                req.flash('success_message', [{msg : 'Kayıt başarılı, giriş yapabilirsiniz.'}])
+                res.redirect('/login');
+            }
+        } catch (err) {
+            console.log("kayıt hata çalıştı");
+        }
+    }
+    
 }
 const forget_password = async (req, res, next) => 	{
     

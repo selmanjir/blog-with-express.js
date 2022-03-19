@@ -8,7 +8,7 @@
                     <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Hesap oluştur</h1>
                         <% if (locals.validation_error != undefined) { %>
-                            <%- include('./partials/_validateError') %> 
+                            <%- include('./partials/_message') %> 
                         <% } %>
                     </div>
                     <form class="user" action="/register" method="post">
