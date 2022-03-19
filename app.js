@@ -1,24 +1,40 @@
-const dotenv = require('dotenv').config();
 const express = require('express');
-const session = require('express-session');
-const path = require('path');
 const app = express();
+
+const dotenv = require('dotenv').config();
+const path = require('path');
+
 const expressLayouts = require('express-ejs-layouts');
 const flash = require ('connect-flash');
 
-let test = 0;
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const db_connect = require('./src/config/db');
+
+const myStore = new SequelizeStore({
+	db: db_connect,
+  });
+
 app.use(session( {
 	secret : process.env.SESSION_SECRET,
 	resave : false,
 	saveUninitialized : true,
+	 store: myStore,
 	cookie : {
-	maxAge :1000*5
+	maxAge :1000*60*60
 	} 	
 }));
+// create database table
+myStore.sync();
 
 app.use(flash());
 app.use((req,res,next) => {
 	res.locals.validation_error = req.flash('validation_error');
+	res.locals.email = req.flash('email');
+	res.locals.username = req.flash('username');
+	res.locals.full_name = req.flash('full_name');
+	res.locals.password = req.flash('password');
+	res.locals.repassword = req.flash('repassword');
 	next();
 });
 

@@ -43,7 +43,6 @@ const loginPost = async (req ,res, next) => {
 
 const register = async (req, res, next) => 	{
 
-    console.log(req.flash('validation_error'));
     res.render('register',{
         
         layout: './layout/auth_layout.ejs'
@@ -51,10 +50,14 @@ const register = async (req, res, next) => 	{
 }
 
 const registerPost = async (req, res, next) => 	{
-    
     const errors  = validationResult(req);
     if (!errors.isEmpty()) {
         req.flash('validation_error', errors.array());
+        req.flash('email', req.body.email);
+        req.flash('username', req.body.username);
+        req.flash('password', req.body.password);
+        req.flash('repassword', req.body.repassword);
+        req.flash('full_name', req.body.full_name);
         res.redirect('/register') 
     }
 

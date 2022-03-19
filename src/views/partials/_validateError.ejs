@@ -1,0 +1,9 @@
+<% validation_error.forEach(element => { %>
+        <div class="alert alert-danger alert-dismissible shadow" role="alert">
+                <strong> <%- element.msg %> </strong>
+                <button class="close" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"> &times; </span>
+                </button>
+        </div>
+        <% }) %>
+        

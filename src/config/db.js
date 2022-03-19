@@ -15,7 +15,7 @@ const connection = new Sequelize(
   )
   
 if(connection.authenticate())
-console.log('veri tabanına bağlandı');
+console.log('Veritabanına bağlandı');
 else{
   console.log('veritabanı bağlantısı başarısız');
 }

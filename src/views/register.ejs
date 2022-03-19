@@ -8,31 +8,31 @@
                     <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Hesap oluştur</h1>
                         <% if (locals.validation_error != undefined) { %>
-                            <%- include('./partials/_error') %> 
+                            <%- include('./partials/_validateError') %> 
                         <% } %>
                     </div>
                     <form class="user" action="/register" method="post">
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="text" name="username" class="form-control form-control-user" id="username"
+                                <input type="text" value=" <%= typeof username != 'undefined' ? username : ''  %>   " name="username" class="form-control form-control-user" id="username"
                                     placeholder="Kullanıcı Adı">
                             </div>  
                             <div class="col-sm-6">
-                                <input type="text" name="full_name" class="form-control form-control-user" id="full_name"
+                                <input type="text" value=" <%= typeof full_name != 'undefined' ? full_name : ''  %>   " name="full_name" class="form-control form-control-user" id="full_name"
                                     placeholder="Adınız ve soyadınız">
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control form-control-user" id="email"
+                            <input type="email" value=" <%= typeof email != 'undefined' ? email : ''  %>   " name="email" class="form-control form-control-user" id="email"
                                 placeholder="Mail">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="password" name="password" class="form-control form-control-user"
+                                <input type="password" value=" <%= typeof password != 'undefined' ? password : ''  %>   " name="password" class="form-control form-control-user"
                                     id="password" placeholder="Şifre">
                             </div>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control form-control-user"
+                                <input type="password" value=" <%= typeof repassword != 'undefined' ? repassword : ''  %>   " class="form-control form-control-user"
                                     name="repassword" id="repassword" placeholder="Şifrenizi tekrar yazınız">
                             </div>
                         </div>
