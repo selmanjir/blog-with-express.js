@@ -22,7 +22,19 @@ const registerValidate = () => {
         })
     ];
 }
+const loginValidate = () => {
+    return [
+        
+        body('username').trim().isLength({min : 6}).withMessage('Kullanıcı adı en az 6 karakterden oluşmalıdır'),
+        body('username').trim().isLength({max : 14}).withMessage('Kullanıcı en fazla 14 karakterden oluşmalıdır'),
+
+        body('password').trim().isLength({min : 6}).withMessage('Şifre en az 6 karakterden oluşmalıdır'),
+        body('password').trim().isLength({max : 20}).withMessage('Şifre en fazla 20 karakterden oluşmalıdır'),
+
+    ];
+}
 
 module.exports = {
-    registerValidate
+    registerValidate,
+    loginValidate
 }
