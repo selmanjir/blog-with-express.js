@@ -1,61 +1,42 @@
-<div class="card o-hidden border-0 shadow-lg my-5">
-    <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
-            <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-            <div class="col-lg-7">
-                <div class="p-5">
-                    <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">Hesap oluştur</h1>
-                        <% if (locals.validation_error != undefined) { %>
-                            <%- include('./partials/_message') %> 
-                        <% } %>
-                    </div>
-                    <form class="user" action="/register" method="post">
-                        <div class="form-group row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="text" value="<%= typeof username != 'undefined' ? username : ''%>" name="username" class="form-control form-control-user" id="username"
-                                    placeholder="Kullanıcı Adı">
-                            </div>  
-                            <div class="col-sm-6">
-                                <input type="text" value="<%= typeof full_name != 'undefined' ? full_name : ''%>" name="full_name" class="form-control form-control-user" id="full_name"
-                                    placeholder="Adınız ve soyadınız">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" value="<%= typeof email != 'undefined' ? email : ''%>" name="email" class="form-control form-control-user" id="email"
-                                placeholder="Mail">
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="password" value="<%= typeof password != 'undefined' ? password : ''%>" name="password" class="form-control form-control-user"
-                                    id="password" placeholder="Şifre">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="password" value="<%= typeof repassword != 'undefined' ? repassword : ''%>" class="form-control form-control-user"
-                                    name="repassword" id="repassword" placeholder="Şifrenizi tekrar yazınız">
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                            Kaydol
-                        </button>
-                        <hr>
-                        <a href="" class="btn btn-google btn-user btn-block">
-                            <i class="fab fa-google fa-fw"></i> Google ile kaydol
-                        </a>
-                        <a href="" class="btn btn-facebook btn-user btn-block">
-                            <i class="fab fa-facebook-f fa-fw"></i> Facebook ile kaydol
-                        </a>
-                    </form>
-                    <hr>
-                    <div class="text-center">
-                        <a class="small" href="forget_password.ejs">Şifremi unuttum</a>
-                    </div>
-                    <div class="text-center">
-                        <a class="small" href="login.ejs">Zaten hesabın var mı ? Giriş yap</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="login-form">
+  
+  <p class="login-text">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-lock fa-stack-1x"></i>
+    </span>
+  </p>
+  <h3 class="myTitle">Kayıt Ol</h3>
+  
+  <div class="section">
+    
+    <div class="section-inner _iner">
+      <form class="user" method="post" action="/register-post">
+        <% if (locals.validation_error != undefined ) { %>
+          <%- include('./partials/_message') %> 
+          <% } %>
+          
+          <input type="text" class="login-input" name="full_name" autofocus="true" required="true" placeholder="Ad Soyad"
+          value="<%- typeof olds[0] != 'undefined' ?  olds[0].full_name :  '' %>"  class="form-control form-control-user"  />
+          
+          <input type="text" class="login-input" name="username" autofocus="true" required="true" placeholder="Kullanıcı Adı" 
+          value="<%- typeof olds[0] != 'undefined' ?  olds[0].username :  '' %>"  class="form-control form-control-user"  />
+          
+          <input type="email" class="login-input" name="email" autofocus="true" required="true" placeholder="Mail" 
+          value="<%- typeof olds[0] != 'undefined' ?  olds[0].email:  '' %>"  class="form-control form-control-user" />
+          
+          <input type="password" class="login-input" name="password" autofocus="true" required="true" placeholder="Şifre" />
+          
+          <input type="password" class="login-input" name="password_verification" required="true" placeholder="Şifre tekrar" />
+          
+          <input type="submit" name="register" value="Kaydet" class="login-submit" />
+        </form>
+        <a href="/login" class="login-forgot-pass">Zaten hesabın var mı ? Giriş yap</a>
+        <div class="underlay-photo"></div>
+        <div class="underlay-black"></div>
+        
+        
+      </div>
+      
     </div>
-</div>
+  </div>

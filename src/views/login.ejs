@@ -1,63 +1,46 @@
- <!-- Outer Row -->
- <div class="row justify-content-center">
-    
-    <div class="col-xl-10 col-lg-12 col-md-9">
+<div class="login-form">
+  <p class="login-text">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-lock fa-stack-1x"></i>
+    </span>  
+  </p>
+  <h3 class="myTitle">Hoşgeldiniz</h3>
+  
+  
+  <div class="section">
+    <div class="section-inner _iner"> 
+      <% if (locals.validation_error != undefined ||  locals.login_error !=undefined) { %>
+        <%- include('./partials/_message') %> 
+        <% } %>
         
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                    <div class="col-lg-6">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Hoşgeldin</h1>
-                                <% if (locals.validation_error != undefined || locals.success_message != undefined || locals.login_error !=undefined) { %>
-                                    <%- include('./partials/_message') %> 
-                                <% } %>
-                            </div>
-                            <form class="user" action="/login-post" method="post">
-                                <div class="form-group">
-                                    <input type="username" value="<%= typeof username != 'undefined' ? username : ''%>" class="form-control form-control-user"
-                                    id="username" aria-describedby="usernameHelp" name="username"
-                                    placeholder="Kullanıcı adınızı giriniz..">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" value="<%= typeof password != 'undefined' ? password : ''%>" class="form-control form-control-user" name="password"
-                                    id="password" placeholder="Şifre">
-                                </div>
-                                <div class="form-group">
-                                    <div class="custom-control custom-checkbox small">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                                        <label class="custom-control-label" for="customCheck">Beni
-                                            hatırla</label>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-primary btn-user btn-block">
-                                        Giriş yap
-                                    </button>
-                                    <hr>
-                                    <a href="index.ejs" class="btn btn-google btn-user btn-block">
-                                        <i class="fab fa-google fa-fw"></i> Google ile giriş
-                                    </a>
-                                    <a href="index.ejs" class="btn btn-facebook btn-user btn-block">
-                                        <i class="fab fa-facebook-f fa-fw"></i> Facebook ile giriş
-                                    </a>
-                                </form>
-                                <hr>
-                                <div class="text-center">
-                                    <a class="small" href="forget_password.ejs">Şifremi unuttum</a>
-                                </div>
-                                <div class="text-center">
-                                    <a class="small" href="register.ejs">Hesap oluştur</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
+        <form class="user" method="POST" action="/login-post"> 
+          
+          <div  class="form-group">
+            <input type="email" class="login-input" placeholder="Mail" name="email"
+          value="<%- typeof olds[0] != 'undefined' ?  olds[0].email :  '' %>"  class="form-control form-control-user"  />
+          </div>
+          
+          <div  class="form-group">
+            <input type="password" class="login-input" name="password" placeholder="Şifre" />
+          </div>
+          
+          <div  class="form-group">
+            <div class="login-label">
+              <input type="checkbox" class="custom-control-input" id="customCheck">
+              <label class="custom-control-label" for="customCheck">Beni hatırla</label>
             </div>
-            
+          </div>
         </div>
+        <button type="submit" class="login-submit">Giriş</button>
         
+      </form>
+      
+      <a href="./forget_password" class="login-forgot-pass">Şifremi unuttum ?</a>
+      <div class="underlay-photo"></div>
+      <div class="underlay-black"></div>
+      
     </div>
-    
+  </div>
+</div>

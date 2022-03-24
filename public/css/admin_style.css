@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+body, html {
+  height: 100%;
+}
+
+
+input ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+input ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+input :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+input:focus {
+  outline: 0 transparent solid;
+}
+input:focus ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+input:focus ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+input:focus :-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+div.login-input {
+  border: 0.1px solid rgb(152, 148, 148);
+  background: transparent;
+  color: white;
+  display: block;
+  margin: 1rem auto;
+  min-width: 122px;
+  padding: 0.25rem;
+}
+div.login-label {
+  background: transparent;
+  color: rgb(209, 209, 209);
+  display: block;
+  margin: 1rem auto;
+  min-width: 100px;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.login-form {
+  min-height: 10rem;
+  margin: auto;
+  max-width: 50%;
+  padding: 2rem;
+}
+
+.login-text {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  max-width: 50%;
+  padding: 0.5rem;
+  text-align: center;
+}
+.login-text .fa-stack-1x {
+  color: black;
+}
+.myTitle {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 1rem;
+  text-align: center;
+}
+.login-input {
+  border: 0.1px solid rgb(152, 148, 148);
+  background: transparent;
+  color: white;
+  display: block;
+  margin: 1rem auto;
+  min-width: 122px;
+  padding: 0.25rem;
+}
+
+
+.login-forgot-pass {
+  bottom: 0;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 75%;
+  left: 0;
+  opacity: 0.6;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+.login-forgot-pass:hover {
+  color :aliceblue;
+  opacity: 1;
+}
+
+.login-submit {
+  border: 0.1px solid rgb(152, 148, 148);
+  background: transparent;
+  color: white;
+  display: block;
+  margin: 1rem auto;
+  min-width: 122px;
+  padding: 0.25rem;
+  transition: 100ms background ease-in;
+}
+.login-submit:hover, .login-submit:focus {
+  background: white;
+  color: black;
+  transition: 250ms background ease-in;
+}
+
+[class*=underlay] {
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.underlay-photo {
+  -webkit-animation: hue-rotate 6s infinite;
+          animation: hue-rotate 6s infinite;
+  background: url("https://31.media.tumblr.com/41c01e3f366d61793e5a3df70e46b462/tumblr_n4vc8sDHsd1st5lhmo1_1280.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(30%);
+  z-index: -1;
+}
+
+.underlay-black {
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+@-webkit-keyframes hue-rotate {
+  from {
+    -webkit-filter: grayscale(30%) hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: grayscale(30%) hue-rotate(360deg);
+  }
+}
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: grayscale(30%) hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: grayscale(30%) hue-rotate(360deg);
+  }
+}
