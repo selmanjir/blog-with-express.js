@@ -12,22 +12,23 @@ require('../config/passport_local')(passport);
 const login = async (req, res, next) => {
     
     res.render('login',{
-        layout: './layout/auth_layout.ejs'
+        layout: './layout/layout.ejs'
     });
 }
 const loginPost = async (req ,res, next) => {
     const errors  = validationResult(req);
+    console.log(errors);
     if (!errors.isEmpty()) {
         // requestten gelen hatalar objesi boş değilse validation_error yolla içini errors dizi ile doldur 
         req.flash('validation_error', errors.array());
         // kullanıcı hatalı girince son girdisinin inputta kalması için request ile yolluyoruz.
-        req.flash('username', req.body.username);
-        req.flash('password', req.body.password);
-         
+        
+        let olds = {'email' : req.body.email}
+        req.flash('olds',olds)
     }
-
+    
     passport.authenticate('local', {
-        successRedirect: '/index',
+        successRedirect: '/',
         failureRedirect: '/login',
         failureFlash: true
     })
@@ -58,14 +59,20 @@ const loginPost = async (req ,res, next) => {
     // };
     
 };
-
+const logout = (req, res, next) => {
+    req.logout();
+    req.session.destroy((erroy) => {
+        res.clearCookie('connect.sid');
+        res.redirect('/login');
+    })
+}
 
 
 const register = async (req, res, next) => 	{
     
     res.render('register',{
         
-        layout: './layout/auth_layout.ejs'
+        layout: './layout/layout.ejs'
     });
 }
 
@@ -73,12 +80,9 @@ const registerPost = async (req, res, next) => 	{
     const errors  = validationResult(req);
     if (!errors.isEmpty()) {
         req.flash('validation_error', errors.array());
-        req.flash('email', req.body.email);
-        req.flash('username', req.body.username);
-        req.flash('password', req.body.password);
-        req.flash('repassword', req.body.repassword);
-        req.flash('full_name', req.body.full_name);
-        
+        let olds = {'full_name' : req.body.full_name, 'username' : req.body.username, 'email' : req.body.email,}
+        req.flash('olds', olds);
+        console.log("1.blok");
         
         res.redirect('/register') 
     }
@@ -86,58 +90,78 @@ const registerPost = async (req, res, next) => 	{
         try {
             const _user = await user.findOne({
                 where : {
-                    email : req.body.email}
-                });
-                
-                if (_user) {
-                    req.flash('validation_error', [{msg : "Bu mail kullanımda"}]);
-                    req.flash('email', req.body.email);
-                    req.flash('username', req.body.username);
-                    req.flash('password', req.body.password);
-                    req.flash('repassword', req.body.repassword);
-                    req.flash('full_name', req.body.full_name);
-                    
-                    res.redirect('/register')
-                    console.log("email hatası çalıştı");
-                }else{
-                    const newUser = new user({
-                        email : req.body.email,
-                        username : req.body.username,
-                        full_name : req.body.full_name,
-                        password : req.body.password
-                    });
-                    //veri tabanına kaydolması için.
-                    await newUser.save();
-                    console.log("kayıt çalıştı");
-                    
-                    req.flash('success_message', [{msg : 'Kayıt başarılı, giriş yapabilirsiniz.'}])
-                    res.redirect('/login');
+                    email : req.body.email
                 }
-            } catch (err) {
-                console.log("kayıt hata çalıştı");
+            });
+            
+            if (_user) {
+                req.flash('validation_error', [{msg : "Bu mail kullanımda"}]);
+                
+                req.flash('olds',olds);
+                res.redirect('/register')
+                console.log("email hatası çalıştı");
+            }else{
+                const newUser = new user({
+                    email : req.body.email,
+                    username : req.body.username,
+                    full_name : req.body.full_name,
+                    password : req.body.password
+                });
+                //veri tabanına kaydolması için.
+                await newUser.save();
+                console.log("kayıt çalıştı");
+                
+                req.flash('success_message', [{msg : 'Kayıt başarılı, giriş yapabilirsiniz.'}])
+                res.redirect('/login');
             }
+        } catch (err) {
+            console.log("kayıt hata çalıştı");
+        }
+    }
+    
+}
+const forget_password = async (req, res, next) => 	{
+    
+    res.render('forget_password',{
+        layout: './layout/layout.ejs'
+    });
+}
+const forget_password_post = async (req, res, next) => 	{
+    const errors  = validationResult(req);
+    if (!errors.isEmpty()) {
+        req.flash('validation_error', errors.array());
+        
+    }
+    else {
+        
+        try {
+            const _user = await user.findOne({
+                where : {email : req.body.email}
+            });
+            if (_user) {
+                
+            } else {
+                
+                req.flash('validation_error', [{msg : 'Bu mail adresi kayıtlı değil veya kullanıcı pasif'}])
+                
+                let olds = {'email' : req.body.email,}
+                req.flash('olds',olds);
+                res.redirect('/forget_password');
+            }
+            
+        } catch (err) {
+            
         }
         
     }
-const forget_password = async (req, res, next) => 	{
-        
-        res.render('forget_password',{
-            layout: './layout/auth_layout.ejs'
-        });
-    }
-const forget_password_post = async (req, res, next) => 	{
-        
-        console.log(req.body);
-        res.render('forget_password',{
-            layout: './layout/auth_layout.ejs'
-        });
-    }
-    
-    module.exports = {
-        login,
-        loginPost,
-        register,
-        registerPost,
-        forget_password,
-        forget_password_post
-    };
+}
+
+module.exports = {
+    login,
+    loginPost,
+    register,
+    registerPost,
+    forget_password,
+    forget_password_post,
+    logout
+};

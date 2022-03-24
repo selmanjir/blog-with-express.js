@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37dd549d-1b00-4ae1-8818-efd225c2a792" name="Changes" comment="frontend update">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/css/sb-admin-2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/jquery/jquery.easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/bootstrap/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/bootstrap/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/demo/chart-area-demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/demo/chart-pie-demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/sb-admin-2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/passport_local.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/passport_local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/validation_middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/validation_middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth_router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/forget_password.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forget_password.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/layout/auth_layout.ejs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26YgzqmDRIeWR4vWIaeckJn7PmN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37dd549d-1b00-4ae1-8818-efd225c2a792" name="Changes" comment="" />
+      <created>1647606206600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647606206600</updated>
+      <workItem from="1647606210761" duration="696000" />
+      <workItem from="1647632720046" duration="1996000" />
+      <workItem from="1647696566884" duration="94000" />
+      <workItem from="1647703393122" duration="640000" />
+      <workItem from="1647799674757" duration="474000" />
+      <workItem from="1648150384177" duration="769000" />
+    </task>
+    <task id="LOCAL-00001" summary="register 3/3">
+      <created>1647612775936</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647612775936</updated>
+    </task>
+    <task id="LOCAL-00002" summary="register 3/3">
+      <created>1647637226480</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647637226480</updated>
+    </task>
+    <task id="LOCAL-00003" summary="session">
+      <created>1647696640348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647696640348</updated>
+    </task>
+    <task id="LOCAL-00004" summary="passport local">
+      <created>1647703425257</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647703425257</updated>
+    </task>
+    <task id="LOCAL-00005" summary="passport local">
+      <created>1647799930717</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647799930717</updated>
+    </task>
+    <task id="LOCAL-00006" summary="frontend update">
+      <created>1648150447635</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648150447635</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="register 3/3" />
+    <MESSAGE value="session" />
+    <MESSAGE value="passport local" />
+    <MESSAGE value="frontend update" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend update" />
+  </component>
+</project>
