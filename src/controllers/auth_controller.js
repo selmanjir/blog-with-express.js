@@ -234,15 +234,54 @@ const forget_password_post = async (req, res, next) => 	{
             const _user = await user.findOne({
                 where : {email : req.body.email}
             });
-            if (_user) {
-                
-            } else {
-                
-                req.flash('validation_error', [{msg : 'Bu mail adresi kayıtlı değil veya kullanıcı pasif'}])
-                
+            if (!_user && _user.email_active == false) {
+                req.flash('validation_error', [{msg : 'Bu mail adresi kayıtlı değil veya kullanıcı mail onayını gerçekleştirmemiş'}])
                 let olds = {'email' : req.body.email,}
                 req.flash('olds',olds);
                 res.redirect('/forget_password');
+            }
+            // Kullanıcının düzgün mail girdiği durumda =>
+             else {
+                
+                const jwtInfo = {
+                    id : _user.id,
+                    email : _user.email
+                }
+                // jwt oluşturn
+                // expiresIn:'1d'  = bu token 1 gün boyunca geçerli
+                const jwtToken = jwt.sign(jwtInfo,process.env.CONFIRM_EMAIL_JWT_SECRET, {expiresIn:'1d'})
+                
+                // SEND MAİL
+                const url = process.env.WEB_SITE_URL+'verify?id=' + jwtToken;
+                
+                let transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth : {
+                        user : process.env.GMAIL_USER,
+                        pass : process.env.GMAIL_PASS
+                    }
+                });
+                
+                
+                await transporter.sendMail({
+                    
+                    from : 'Express-BlogProject <info@nodejstestmail85.com',
+                    to : _user.email,
+                    subject : 'Şifre güncelleme ',
+                    text : 'Şifrenizi güncellemek için lütfen bu linke tıklayınız.' + url,
+                    
+                }), (err, info) => {
+                    if (err) {
+                        console.log('kayıt hata çalıştı ' + err);   
+                    }
+                    console.log('Mail gönderildi');
+                    transporter.close();
+                }   
+
+
+                
+
+                
             }
             
         } catch (err) {
