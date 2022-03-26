@@ -5,25 +5,7 @@ const User = require('../models/user');
 
 const registerValidate = {
 
-    email: {
-        trim: true,
-        normalizeEmail: true,
-        notEmpty: true,
-        errorMessage: "Email alanı gerekli",
-        custom: {
-            options: async (value) => {
-                return await User.findAll({
-                    where: { 
-                        email: value
-                    }
-                }).then(user => {
-                    if (user.length > 0 && value != '@') {
-                        return Promise.reject('E-Mail zaten kayıtlı')
-                    }else return true
-                })
-            }
-        }
-    },
+
     full_name: {
         trim: true,
         notEmpty: true,
