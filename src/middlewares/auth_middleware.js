@@ -1,15 +1,11 @@
-
-
 const Authenticated = (req, res, next) => {
     if(req.isAuthenticated()){
-        res.locals.user = req.user
-        
-        res.locals.isAuth = req.isAuthenticated()
+        return next();
     }
     else {
         req.flash('error', ['Lütfen önce oturum açın']);
         
-        res.redirect('/login')
+        res.redirect('/login');
     }
     
     next();
@@ -19,15 +15,12 @@ const Authenticated = (req, res, next) => {
 const UnAuthenticated = (req, res, next) => {
     if (!req.isAuthenticated()) {
         
-        res.locals.user = req.user
-        
-        
-        res.locals.isAuth = req.isAuthenticated()
+        return next();
     } else {
-        
-    }
     
-    next();
+        res.redirect('/');
+    }
+
     
 }
 module.exports = {

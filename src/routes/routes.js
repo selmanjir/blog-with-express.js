@@ -8,37 +8,38 @@ const {get_home} = require('../controllers/home_controller')
 
 const {registerValidate, passwordValidate} = require('../middlewares/validation_middleware');
 
-const {Authenticated, UnAuthenticated} = require('../middlewares/auth_middleware');
+const {Authenticated, UnAuthenticated, } = require('../middlewares/auth_middleware');
+const checkAuth = require('../middlewares/checkAuth');
 
 
 const router = express.Router();
 
 
-router.get('/',UnAuthenticated, get_home);
+router.get('/', get_home);
 
 
-router.get('/login',UnAuthenticated , login);
+router.get('/login',UnAuthenticated , checkAuth, login);
 
-router.post('/login-post',UnAuthenticated, loginPost)
+router.post('/login-post',UnAuthenticated, checkAuth, loginPost)
 
-router.get('/logout',Authenticated, logout); 
-
-
-router.get('/register',UnAuthenticated, register);
-
-router.post('/register-post',[checkSchema(registerValidate),UnAuthenticated], registerPost);
-
-router.get('/verify', UnAuthenticated, verify_email)
+router.get('/logout',Authenticated, checkAuth, logout); 
 
 
-router.get('/forget_password',UnAuthenticated, forget_password);
+router.get('/register',UnAuthenticated, checkAuth, register);
 
-router.post('/forget_password-post',UnAuthenticated, forget_passwordPost); 
+router.post('/register-post',[checkSchema(registerValidate),UnAuthenticated, checkAuth,], registerPost);
+
+router.get('/verify', UnAuthenticated, checkAuth, verify_email)
 
 
-router.get('/new_password/:id/:token',UnAuthenticated, new_password );
+router.get('/forget_password',UnAuthenticated, checkAuth, forget_password);
 
-router.get('/new_password',UnAuthenticated, new_password );
+router.post('/forget_password-post',UnAuthenticated, checkAuth, forget_passwordPost); 
+
+
+router.get('/new_password/:id/:token',UnAuthenticated, checkAuth, new_password );
+
+router.get('/new_password',UnAuthenticated, checkAuth, new_password );
 
 router.post('/new_password-post',[checkSchema(passwordValidate),UnAuthenticated], new_passwordPost );
 
