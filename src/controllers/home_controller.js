@@ -1,4 +1,4 @@
-const getHome = async (req, res, next) =>  {
+const get_home = async (req, res, next) =>  {
     res.render('./index', {
         layout: './layout/layout.ejs',
         user: req.user ,
@@ -9,5 +9,5 @@ const getHome = async (req, res, next) =>  {
 
 
 module.exports = {
-    getHome
+    get_home
 };

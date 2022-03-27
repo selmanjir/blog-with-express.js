@@ -51,7 +51,7 @@ const registerValidate = {
             }
         }
     },
-    password_verification: {
+    repassword: {
         trim: true,
         custom: {
             options: (value, { req }) => {
@@ -65,11 +65,37 @@ const registerValidate = {
     
     
 }
+const passwordValidate  = {
+    
+    password: {
+        trim: true,
+        custom: {
+            options: (value) => {
+                if(value == '')  return Promise.reject('Şifre alanı gerekli')
+                else if(value.length < 6)  return Promise.reject('Şifre 8 karakterden küçük olamaz')
+                return true
+            }
+        }
+    },
+    repassword: {
+        trim: true,
+        custom: {
+            options: (value, { req }) => {
+                if(value == '')  return Promise.reject('Şifre onaylama alanı gerekli')
+                else if(req.body.password != value)  return Promise.reject('Şifreler uyuşmuyor')
+                else return true
+            }
+        }
+        
+    },
+    
+}
 
 
 
 
 
 module.exports = {
-    registerValidate
+    registerValidate,
+    passwordValidate
 }

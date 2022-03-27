@@ -43,7 +43,7 @@ app.use((req,res,next) => {
 
 
 	// son girdinin inputta kayıtlı kalması için controller tarafında request ile yolladığımız verileri response ediyoruz
-	res.locals.olds =  req.flash('olds');
+	res.locals.olds =req.flash('olds');
 	next();
 });
 	
