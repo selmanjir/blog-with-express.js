@@ -72,6 +72,15 @@ div.login-label {
   padding: 1rem;
   text-align: center;
 }
+.myTitle2 {
+  color:rgb(59, 60, 60);
+  background: transparent;
+  font-size: 0.8rem;
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 1rem;
+  text-align: center;
+}
 .login-input {
   border: 0.1px solid rgb(152, 148, 148);
   background: transparent;

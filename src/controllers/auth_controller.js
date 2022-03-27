@@ -105,7 +105,7 @@ const registerPost = async (req, res, next) => 	{
                 req.flash('validation_error', [{msg : "Bu mail kullanımda"}]);
                 let olds = {'full_name' : req.body.full_name, 'username' : req.body.username, 'email' : req.body.email,}
                 req.flash('olds', olds);
-                res.redirect('/register')
+                res.redirect('/register');
                 console.log("email hatası çalıştı");
             }else if ((_user && _user.email_active == false) || _user == null) {
                 
@@ -173,7 +173,7 @@ const registerPost = async (req, res, next) => 	{
     
 }
 
-const verifyEmail = (req, res, next) => {
+const verify_email = (req, res, next) => {
     
     // registerPost içinde mailde bulunun url de 1 adet request query parametresi belirttik burda onu çağırıyoruz.
     const token = req.query.id;
@@ -216,17 +216,21 @@ const verifyEmail = (req, res, next) => {
     }
 };
 
+
 const forget_password = async (req, res, next) => 	{
     
     res.render('forget_password',{
         layout: './layout/layout.ejs'
     });
 }
-const forget_password_post = async (req, res, next) => 	{
+const forget_passwordPost = async (req, res, next) => 	{
     const errors  = validationResult(req);
     if (!errors.isEmpty()) {
         req.flash('validation_error', errors.array());
+        let olds = {'email' : req.body.email,}
+        req.flash('olds', olds);
         
+        res.redirect('/register') 
     }
     else {
         
@@ -234,7 +238,7 @@ const forget_password_post = async (req, res, next) => 	{
             const _user = await user.findOne({
                 where : {email : req.body.email}
             });
-            if (!_user && _user.email_active == false) {
+            if (!_user || _user.email_active == false) {
                 req.flash('validation_error', [{msg : 'Bu mail adresi kayıtlı değil veya kullanıcı mail onayını gerçekleştirmemiş'}])
                 let olds = {'email' : req.body.email,}
                 req.flash('olds',olds);
@@ -247,12 +251,14 @@ const forget_password_post = async (req, res, next) => 	{
                     id : _user.id,
                     email : _user.email
                 }
+                const secret = process.env.RESET_PASSWORD_JWT_SECRET+ '-' + _user.password;
+                
                 // jwt oluşturn
                 // expiresIn:'1d'  = bu token 1 gün boyunca geçerli
-                const jwtToken = jwt.sign(jwtInfo,process.env.CONFIRM_EMAIL_JWT_SECRET, {expiresIn:'1d'})
-                
+                const jwtToken = jwt.sign(jwtInfo,secret, {expiresIn:'1d'})
+                 
                 // SEND MAİL
-                const url = process.env.WEB_SITE_URL+'verify?id=' + jwtToken;
+                const url = process.env.WEB_SITE_URL + "new_password/" + _user.id + "/" + jwtToken;
                 
                 let transporter = nodemailer.createTransport({
                     service: 'gmail',
@@ -270,19 +276,21 @@ const forget_password_post = async (req, res, next) => 	{
                     subject : 'Şifre güncelleme ',
                     text : 'Şifrenizi güncellemek için lütfen bu linke tıklayınız.' + url,
                     
-                }), (err, info) => {
+                }, (err, info) => {
                     if (err) {
                         console.log('kayıt hata çalıştı ' + err);   
                     }
                     console.log('Mail gönderildi');
                     transporter.close();
-                }   
-
-
+                });   
+                
                 
 
-                
+                req.flash('success_message', [{msg : 'Lütfen mail kutunuzu kontrol ediniz.'}]);
+                res.redirect('/login')
             }
+            
+              
             
         } catch (err) {
             
@@ -290,6 +298,78 @@ const forget_password_post = async (req, res, next) => 	{
         
     }
 }
+const new_password = async (req, res, next) => {
+
+    const idInUrl = req.params.id;
+    const tokenInUrl = req.params.token;
+
+    if (idInUrl && tokenInUrl) {
+
+        const _findUser= await user.findOne({where : {id : idInUrl}})
+        
+        const secret = process.env.RESET_PASSWORD_JWT_SECRET + '-' + _findUser.password;
+        
+        try {
+            jwt.verify(tokenInUrl,secret, async (err, decoded) => {
+                
+                if (err) {
+                    
+                    req.flash('error', 'Link hatalı yada süresi geçmiş')
+                    res.redirect('/forget_password')
+                } else {
+
+                    res.render('reset_password',{
+                        // Kullanıcı şifreyi sıfırlama sayfasında bir hata yapınca yani validate devreye girince yeni sayfada
+                        // id ve token değeri kaybolacağı için sayfanın içine gömüyoruz.
+                        id : idInUrl,
+                        token : tokenInUrl,
+                        layout: './layout/layout.ejs'
+                    });
+                    
+                    
+                }
+                console.log(req.params.id);
+                console.log(req.params.token);
+                
+            } )
+        } catch (err) {
+            
+        }
+
+    } else {
+        
+        req.flash('validation_error', [{msg : 'Erişim sağlanmadı lütfen maildeki linke tıklayın.'}])
+        
+        res.redirect('forget_password')
+
+    }
+
+}
+const new_passwordPost = async (req, res, next) => {
+    const errors  = validationResult(req);
+    if (!errors.isEmpty()) {
+        req.flash('validation_error', errors.array());
+        let olds = {'password' : req.body.password, 'repassword' : req.body.repassword}
+        req.flash('olds', olds);
+        res.redirect('/new_password'+ "/"+req.body.id + "/" + req.body.token );
+
+
+    }else{
+        const result = await user.update(
+            { password : await bcrypt.hash(req.body.password, 10)},
+            { where : {id : req.body.id}}
+            
+        )
+        if (result) {
+            req.flash('success_message',[{msg :'Şifre başarılı bir şekilde değiştirildi Giriş yapabilirsiniz.'}])
+            res.redirect('/login')
+        } else {
+            req.flash('error',[{msg :'Lütfen şifre sıfırlama işlemlerini tekrarlayınız'}])
+            res.redirect('/forget_passoword')
+        }
+    }
+}
+
 
 module.exports = {
     login,
@@ -297,7 +377,9 @@ module.exports = {
     register,
     registerPost,
     forget_password,
-    forget_password_post,
+    forget_passwordPost,
     logout,
-    verifyEmail
+    verify_email,
+    new_password,
+    new_passwordPost
 };
