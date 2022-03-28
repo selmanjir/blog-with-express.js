@@ -17,8 +17,16 @@ const UnAuthenticated = (req, res, next) => {
         
         return next();
     } else {
-    
-        res.redirect('/');
+        
+       const msg = '<p > Sayfaya erişebilmek için önce çıkış yapmalısın</p>'
+
+       
+       res.render('error',{
+        layout: './layout/error_layout.ejs',
+        msg
+       }
+       );
+        
     }
 
     

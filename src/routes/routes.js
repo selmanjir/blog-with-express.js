@@ -29,6 +29,7 @@ router.get('/register',UnAuthenticated, checkAuth, register);
 
 router.post('/register-post',[checkSchema(registerValidate),UnAuthenticated, checkAuth,], registerPost);
 
+router.get('/verify/:id/:token', UnAuthenticated, checkAuth, verify_email)
 router.get('/verify', UnAuthenticated, checkAuth, verify_email)
 
 
