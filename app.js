@@ -5,6 +5,7 @@ const dotenv = require('dotenv').config();
 const path = require('path');
 
 const db_connect = require('./src/config/db');
+const associations = require('./src/models/associations')
 
 const expressLayouts = require('express-ejs-layouts');
 const flash = require ('connect-flash');
@@ -46,7 +47,9 @@ app.use((req,res,next) => {
 	res.locals.olds =req.flash('olds');
 	next();
 });
-	
+
+associations();
+
 app.use(passport.initialize());
 
 app.use(passport.session());
