@@ -1,19 +1,19 @@
 'use strict';
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, NUMBER } = require('sequelize');
 
 const sequelize = require('../config/db');
 
 class Post_category extends Model {}
 Post_category.init({
   postId : {
-    type : INTEGER,
+    type : NUMBER,
     references : {
       model : 'posts',
       key : 'id'
     }
   },
   categoryId : {
-    type : INTEGER,
+    type : NUMBER,
     references : {
       model : 'categories',
       key : 'id'

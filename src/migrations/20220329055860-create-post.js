@@ -14,6 +14,9 @@ module.exports = {
       content: {
         type: Sequelize.STRING
       },
+      post_face: {
+        type: Sequelize.STRING
+      },
       authorId: {
         type: Sequelize.INTEGER,
         references: {model: 'users', key: 'id' }

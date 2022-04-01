@@ -6,9 +6,14 @@
                 <button>Son Yayınlananlar <div class="line-hover"></div></button>
                 <div class="line"></div>
             </div>
-            <button class="create-post btn">
-                Gönderi Oluştur
-            </button>
+            <% if(isAuth === true) { %> 
+                <a href="/create-post" class="create-post btn">
+                    Gönderi Oluştur
+                </a>
+              <% } else if (isAuth === false){ %> 
+                
+              <% } %> 
+             
         </div>
     </div>
 </div>
@@ -34,10 +39,6 @@
                             <span class="dot">·</span>
                             <span class="time">21.54</span>
                         </div>
-                        <span class="read-time">
-                            <img src="/media/book.svg" alt="book.svg">
-                            10 dak.
-                        </span>
                     </div>
                 </span>
                 
@@ -62,10 +63,6 @@
                             <span class="dot">·</span>
                             <span class="time">21.54</span>
                         </div>
-                        <span class="read-time">
-                            <img src="/media/book.svg" alt="book.svg">
-                            10 dak.
-                        </span>
                     </div>
                 </span>
                 

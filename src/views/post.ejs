@@ -1,0 +1,88 @@
+<% if (locals.validation_error != undefined ) { %>
+    <%- include('./partials/_message') %> 
+    <% } %>
+    <div class="modal-header">
+        <h5 class="modal-title mx-auto w-75">Gönderi Oluştur</h5>
+        <a href="/" type="button" class="btn-close" ></a>
+    </div>
+    <form action="/create-post" method="post" id="create_post" enctype="multipart/form-data" class="w-75 mx-auto">
+        
+        <h1>
+            <%- typeof olds[0] != 'undefined' ?  olds[0].post_title :  ''  %> 
+        </h1>
+        
+        <div class="modal-body">
+            <div class="form-floating mb-3">
+                <input name="post_title" type="text" class="form-control" id="title" placeholder="Gönderi Başlığı">
+                <label for="floatingInput">Gönderi Başlığı*</label>
+            </div>
+            <div class="input-group mb-3">
+                <input name="post_face" type="file" class="custom-file-input" id="post_face">
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" name="content" placeholder="İçerik*" id="content" style="height: 100px"></textarea>
+                <label for="floatingTextarea">İçerik*</label>
+            </div>
+            <div class="form-floating">
+                <select name="categories" id="categories" class="js-multiple-select form-control" multiple="multiple" style="width: 100% !important;" placeholder="Kategori*">
+                    
+                </select>
+                <label for="categories">Kategori*</label>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary text-white" id="create_post_submit">Yayınla</button>
+                
+            </div>
+        </form>
+    </div>
+    
+    <link rel="stylesheet" href="css/select2.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/whpxzxt9tio7zk3m6x5q5xa5mipycohusw68gupm8yzy7x0f/tinymce/5-stable/tinymce.min.js"></script>
+    <script>
+        $(function() {
+            $('.js-multiple-select').select2({
+                tags: true,
+                tokenSeparators: [',', ' '],
+                placeholder: 'Kategori arayın..'
+            });
+        });
+        
+        
+        tinymce.init({
+            theme: 'silver',
+            selector: 'textarea#content',
+            plugins: 'paste importcss searchreplace autolink autosave code visualblocks visualchars fullscreen image link media template codesample table charmap hr nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable charmap quickbars emoticons',
+            imagetools_cors_hosts: ['picsum.photos'],
+            menubar: 'file edit view insert format tools table help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+            toolbar_sticky: true,
+            autosave_ask_before_unload: true,
+            autosave_interval: '30s',
+            autosave_prefix: '{path}{query}-{id}-',
+            autosave_restore_when_empty: false,
+            autosave_retention: '2m',
+            image_advtab: true,
+            link_list: [
+            ],
+            importcss_append: true,
+            templates: [
+            { title: 'New Table', description: 'creates a new table', content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>' },
+            { title: 'New list with dates', description: 'New List with dates', content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>' }
+            ],
+            template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+            template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+            height: 600,
+            image_caption: true,
+            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+            noneditable_noneditable_class: 'mceNonEditable',
+            toolbar_mode: 'sliding',
+            contextmenu: 'link image imagetools table',
+            skin: 'oxide',
+            content_css: 'default',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+        });
+        
+    </script>

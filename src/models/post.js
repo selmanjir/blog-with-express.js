@@ -7,6 +7,7 @@ const sequelize = require('../config/db');
   Post.init({
     title: DataTypes.STRING,
     content: DataTypes.STRING,
+    post_face : DataTypes.STRING,
     authorId : {
       type : INTEGER,
       references : {

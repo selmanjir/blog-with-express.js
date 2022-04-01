@@ -223,7 +223,7 @@ const verify_email = async (req, res, next) => {
         } else {
             console.log('Mail onayında token bulunmadı');
         }
-    };
+    }
     
     
     const forget_password = async (req, res, next) => 	{
