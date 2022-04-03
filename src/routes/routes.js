@@ -10,15 +10,16 @@ const {create_post, create_postPost} = require('../controllers/post_controller')
 const {registerValidate, passwordValidate} = require('../middlewares/validation_middleware');
 
 const {Authenticated, UnAuthenticated, } = require('../middlewares/auth_middleware');
-const checkAuth = require('../middlewares/checkAuth');
+const {checkAuth} = require('../middlewares/checkAuth');
+const {imageUpload} = require('../config/multer_config');
 
 
 const router = express.Router();
 
 
 router.get('/', get_home);
-router.get('/get-profile', get_profile);
-router.get('/get-profilePos', post_profile);
+router.get('/get-profile',Authenticated, checkAuth, get_profile);
+router.post('/post-profile',Authenticated, checkAuth, imageUpload.single('avatar'), post_profile);
 
 // login register forget-password..
 router.get('/login',UnAuthenticated , checkAuth, login);

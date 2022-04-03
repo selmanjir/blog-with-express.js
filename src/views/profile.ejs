@@ -1,41 +1,34 @@
 <div class="wrapper bg-white m-sm-5">
     <h2 class="pb-2 border-bottom"> Profil</h2>
 
-    <form action="/get-profilePost" method="post" enctype="multipart/form-data">
-    <div class="d-flex align-items-start py-3 border-bottom "> <img 
-        src="https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-        class="img" alt="">
+    <form action="/post-profile" method="post" enctype="multipart/form-data">
+    <div class="d-flex align-items-start py-3 border-bottom "> 
         <div class="pl-sm-4 pl-2 m-sm-5" id="img-section"> <b>Profile Photo</b>
             <p>Accepted file type .png. Less than 1MB</p> 
             <input name="avatar" type="file" class="btn button border"></input>
         </div>
+        <div class="py-2">
+            <div class="row py-2">
+                <div class="col-md-6"> <label for="full_name">Adınız ve Soyadınız</label> 
+                    <input type="text" name="full_name" class="bg-light form-control" 
+                    value="<%- user.full_name  %>" placeholder="Steve"> 
+                </div>
+                <div class="col-md-6 pt-md-0 pt-3"> <label for="username">Kullanıcı Adınız</label> 
+                    <input type="text" name="username" class="bg-light form-control" 
+                    value="<%- user.username  %>" placeholder="Smith"> 
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-6"> <label for="email">Email</label> 
+                    <input type="text" name="email" readonly class="bg-light form-control" 
+                    value="<%- user.email  %>" placeholder="steve_@email.com"> 
+                </div>
+            <div class="py-3 pb-4 border-bottom"> 
+                <button type="submit" class="btn btn-primary mr-3">Profili Guncelle</button> 
+                <button class="btn border button">Cancel</button> 
+            </div>
     </div>
-    <div class="py-2">
-        <div class="row py-2">
-            <div class="col-md-6"> <label for="full_name">Adınız ve Soyadınız</label> 
-                <input type="text" name="full_name" class="bg-light form-control" 
-                value="<%- user.full_name  %>" placeholder="Steve"> 
-            </div>
-            <div class="col-md-6 pt-md-0 pt-3"> <label for="username">Kullanıcı Adınız</label> 
-                <input type="text" name="username" class="bg-light form-control" 
-                value="<%- user.username  %>" placeholder="Smith"> 
-            </div>
-        </div>
-        <div class="row py-2">
-            <div class="col-md-6"> <label for="email">Email</label> 
-                <input type="text" name="email" readonly class="bg-light form-control" 
-                value="<%- user.email  %>" placeholder="steve_@email.com"> 
-            </div>
-        <div class="py-3 pb-4 border-bottom"> 
-            <button type="submit" class="btn btn-primary mr-3">Profili Guncelle</button> 
-            <button class="btn border button">Cancel</button> 
-        </div>
+   
     </form>
-        <div class="d-sm-flex align-items-center pt-3" id="deactivate">
-            <div> <b>Deactivate your account</b>
-                <p>Details about your company account and password</p>
-            </div>
-            <div class="ml-auto"> <button class="btn danger">Deactivate</button> </div>
-        </div>
-    </div>
+        
 </div>
