@@ -32,7 +32,7 @@
       <ul>
         <li><a href="/">Ana Sayfa</a></li>
         <% if(isAuth === true) { %> 
-          <li><a ><%- user.username %> </a></li>
+          <li><a href="/get-profile"><%- user.username %> </a></li>
           <li><a href="/logout">Çıkış Yap</a></li>
         <% } else if (isAuth === false){ %> 
           <li><a href="/login">Giriş Yap</a></li>

@@ -3,7 +3,7 @@ const express = require('express');
 const {body, checkSchema, validationResult} = require('express-validator');
 
 const {login, loginPost, register, registerPost, forget_password, forget_passwordPost, new_password, new_passwordPost, logout, verify_email,} = require('../controllers/auth_controller')
-const {get_home} = require('../controllers/home_controller')
+const {get_home, get_profile, post_profile} = require('../controllers/home_controller')
 const {create_post, create_postPost} = require('../controllers/post_controller')
 
 
@@ -17,6 +17,8 @@ const router = express.Router();
 
 
 router.get('/', get_home);
+router.get('/get-profile', get_profile);
+router.get('/get-profilePos', post_profile);
 
 // login register forget-password..
 router.get('/login',UnAuthenticated , checkAuth, login);
@@ -47,6 +49,6 @@ router.post('/new_password-post',[checkSchema(passwordValidate),UnAuthenticated]
 // post
 
 router.get('/create-post',Authenticated,create_post);
-router.post('/create-post',Authenticated,create_postPost);
+router.post('/create-postPost',Authenticated,create_postPost);
 
 module.exports = router;
