@@ -10,6 +10,7 @@ const sequelize = require('../config/db');
     password: DataTypes.STRING,
     email: DataTypes.STRING,
     email_active : DataTypes.BOOLEAN,
+    avatar : DataTypes.STRING,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   }, {

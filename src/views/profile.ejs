@@ -1,11 +1,16 @@
 <div class="wrapper bg-white m-sm-5">
     <h2 class="pb-2 border-bottom"> Profil</h2>
-
+   
     <form action="/post-profile" method="post" enctype="multipart/form-data">
+        <% if (locals.validation_error != undefined ) { %>
+            <%- include('./partials/_message') %> 
+            <% } %>
     <div class="d-flex align-items-start py-3 border-bottom "> 
-        <div class="pl-sm-4 pl-2 m-sm-5" id="img-section"> <b>Profile Photo</b>
+       
+        <div class="pl-sm-4 pl-2 m-sm-5" id="img-section">   <b>Profile Photo</b>
+            <img src="<%- user.avatar  %>" alt="">
             <p>Accepted file type .png. Less than 1MB</p> 
-            <input name="avatar" type="file" class="btn button border"></input>
+            <input  name="avatar" type="file" class="btn button border"></input>
         </div>
         <div class="py-2">
             <div class="row py-2">

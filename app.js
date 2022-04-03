@@ -39,6 +39,8 @@ app.use((req,res,next) => {
 	res.locals.validation_error = req.flash('validation_error');
 	
 	res.locals.success_message = req.flash('success_message');
+
+	res.locals.success_message_black = req.flash('success_message_black');
 	
 	res.locals.login_error = req.flash('error');
 

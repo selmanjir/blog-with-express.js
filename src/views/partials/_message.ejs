@@ -15,6 +15,15 @@
                         </button>
                 </div>
 <% }) %>       
+
+<% success_message_black.forEach(element => { %>
+        <div align="center" class="alert alert-dismissible alert-dismissible fade show" role="alert">
+                <strong style="color: rgb(12, 12, 13);"> <%- element.msg %> </strong>
+                <button  type="button" class="btn-close-white" data-bs-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"> &times; </span>
+                </button>
+        </div>
+<% }) %>  
                 
 <% login_error.forEach(error => { %>
         <div align="center"  class="alert alert-dismissible alert-dismissible fade show" role="alert">
