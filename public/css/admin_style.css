@@ -90,7 +90,10 @@ div.login-label {
   min-width: 122px;
   padding: 0.25rem;
 }
-
+img.round {
+  border-radius: 50%;
+    object-fit: cover;
+}
 
 .login-forgot-pass {
   bottom: 0;

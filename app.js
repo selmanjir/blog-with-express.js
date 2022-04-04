@@ -57,8 +57,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-
+// http://localhost:4111/ adresindesindeyken public klasörüne erişim sağladık
 app.use('/', express.static('public'));
+
+// __dirname'ye birkez daha değiniyim bize önceden belirttiğimiz uploads klasörünün arkasında kalan bütün path'i vermiş oldu.
+// artık uploads'a bir istekte bulunduğumuzda belirttiğimiz yola gitmiş olacağız.
+app.use('/uploads', express.static(path.join(__dirname,'./src/uploads')));
 
 app.use(expressLayouts);
 

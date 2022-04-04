@@ -32,6 +32,7 @@
       <ul>
         <li><a href="/">Ana Sayfa</a></li>
         <% if(isAuth === true) { %> 
+          <li><img src="/uploads/avatars/<%- user.avatar %> " class="round" width="25" alt=""></li>
           <li><a href="/get-profile"><%- user.username %> </a></li>
           <li><a href="/logout">Çıkış Yap</a></li>
         <% } else if (isAuth === false){ %> 

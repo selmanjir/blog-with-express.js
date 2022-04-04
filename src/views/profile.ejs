@@ -6,14 +6,15 @@
             <%- include('./partials/_message') %> 
             <% } %>
     <div class="d-flex align-items-start py-3 border-bottom "> 
-       
-        <div class="pl-sm-4 pl-2 m-sm-5" id="img-section">   <b>Profile Photo</b>
-            <img src="<%- user.avatar  %>" alt="">
-            <p>Accepted file type .png. Less than 1MB</p> 
-            <input value=" <%- user.avatar  %>  " name="avatar" type="file" class="btn button border"></input>
-        </div>
         <div class="py-2">
             <div class="row py-2">
+                <div class="pl-sm-4 pl-2 m-sm-5" id="img-section">
+                    <h1>Profil fotoğrafı</h1> 
+                    <br>
+                    <img src="/uploads/avatars/<%- user.avatar  %>" width="200" height="200" class="round" alt="">
+                    <p>Kabul edilen dosya türü .png ve .jpg</p> 
+                    <input value=" <%- user.avatar  %>  " name="avatar" type="file" class="btn button border"></input>
+                </div>
                 <div class="col-md-6"> <label for="full_name">Adınız ve Soyadınız</label> 
                     <input type="text" name="full_name" class="bg-light form-control" 
                     value="<%- user.full_name  %>" placeholder="Steve"> 

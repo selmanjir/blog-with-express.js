@@ -50,12 +50,22 @@ module.exports =  (passport) =>  {
     })
     passport.deserializeUser(async(id, done)=> {
         // cookie den okunan id değerinin kullanıcı tablosunda tekrar okunması ve kullanıcının geriye döndürülmesi
-        const user = await User.findOne({
-            where:{
-                id: id
-            }
-        }
-        );
+        const user = await User.findOne(
+            
+            { where: { id: id } },
+            
+        )
+        user.update(
+            {
+                email: user.email,
+                username: user.username,
+                full_name: user.full_name,
+                password: user.password,
+                createdAt: user.createdAt,
+                updatedAt: user.updatedAt,
+                avatar: user.avatar
+            },
+        )
         done(null, user);
     });
     
