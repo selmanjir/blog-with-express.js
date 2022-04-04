@@ -7,9 +7,11 @@ const Post_category = require('../models/post_category');
 
 
 const create_post = async (req, res, next) => {
-
+    let categories = await Category.findAll({})
     res.render('./post',{
         layout: './layout/layout.ejs',
+        
+        categories: categories,
         user: req.user ,
         isAuth: req.isAuthenticated()
     })
@@ -23,6 +25,7 @@ const create_postPost = async (req, res, next) => {
     } else {
     
     const db_categories = await Category.findAll();
+    console.log(db_categories);
     let dbCategories = [];
     db_categories.forEach(element => {
         dbCategories.push(element.title);
@@ -33,6 +36,7 @@ const create_postPost = async (req, res, next) => {
 
         title : req.body.post_title,
         content : req.body.content,
+        categories : req.body.categories,
         post_face : req.body.post_face,
         authorId : req.user.id,
 
