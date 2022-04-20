@@ -3,7 +3,7 @@ const Authenticated = (req, res, next) => {
         return next();
     }
     else {
-        req.flash('error', ['Lütfen önce oturum açın']);
+        req.flash('login_error', ['Lütfen önce oturum açın']);
         
         res.redirect('/login');
     }

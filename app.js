@@ -42,7 +42,7 @@ app.use((req,res,next) => {
 
 	res.locals.success_message_black = req.flash('success_message_black');
 	
-	res.locals.login_error = req.flash('error');
+	res.locals.login_error = req.flash('login_error');
 
 
 	// son girdinin inputta kayıtlı kalması için controller tarafında request ile yolladığımız verileri response ediyoruz

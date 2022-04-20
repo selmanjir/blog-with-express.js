@@ -194,7 +194,7 @@ const verify_email = async (req, res, next) => {
                 console.log(secret);
                 if (err) {
                     console.log(err);
-                    req.flash('error', 'Link hatalı yada süresi geçmiş')
+                    req.flash('login_error', 'Link hatalı yada süresi geçmiş')
                     res.redirect('/login')
                 } else {
                     const idInToken = decoded.id;
@@ -209,7 +209,7 @@ const verify_email = async (req, res, next) => {
                             req.flash('success_message',[{msg : 'Mail başarı ile onaylandı'}])
                             res.redirect('/login');
                         } else {
-                            req.flash('error','Lütfen yeni bir hesap oluşturun')
+                            req.flash('login_error','Lütfen yeni bir hesap oluşturun')
                             res.redirect('/login');
                         }
                     }
@@ -322,7 +322,7 @@ const verify_email = async (req, res, next) => {
                 jwt.verify(tokenInUrl,secret, async (err, decoded) => {
                     
                     if (err) {
-                        req.flash('error', 'Link hatalı yada süresi geçmiş')
+                        req.flash('login_error', 'Link hatalı yada süresi geçmiş')
                         res.redirect('/forget_password')
                     } else {
                         req.flash('olds',{id: idInUrl, token : tokenInUrl,})
@@ -371,7 +371,7 @@ const verify_email = async (req, res, next) => {
                     req.flash('success_message',[{msg :'Şifre başarılı bir şekilde değiştirildi Giriş yapabilirsiniz.'}])
                     res.redirect('/login')
                 } else {
-                    req.flash('error',[{msg :'Lütfen şifre sıfırlama işlemlerini tekrarlayınız'}])
+                    req.flash('login_error',[{msg :'Lütfen şifre sıfırlama işlemlerini tekrarlayınız'}])
                     res.redirect('/forget_passoword')
                 }
             }

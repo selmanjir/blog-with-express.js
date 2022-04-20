@@ -8,9 +8,10 @@ const Post_category = require('../models/post_category');
 
 const create_post = async (req, res, next) => {
     let categories = await Category.findAll({})
+    console.log(categories);
     res.render('./post',{
         layout: './layout/layout.ejs',
-        
+
         categories: categories,
         user: req.user ,
         isAuth: req.isAuthenticated()

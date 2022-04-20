@@ -8,9 +8,9 @@ const {create_post, create_postPost} = require('../controllers/post_controller')
 
 
 const {registerValidate, passwordValidate} = require('../middlewares/validation_middleware');
-
 const {Authenticated, UnAuthenticated, } = require('../middlewares/auth_middleware');
 const {checkAuth} = require('../middlewares/checkAuth');
+
 const {imageUpload} = require('../config/multer_config');
 
 
