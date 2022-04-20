@@ -25,7 +25,9 @@
             </div>
             <div class="form-floating">
                 <select name="categories" id="categories" class="js-multiple-select form-control" multiple="multiple" style="width: 100% !important;" placeholder="Kategori*">
-                    
+                    <% categories.forEach(element => { %>
+                        <option><%- element.title %> </option>
+                    <% }) %>
                 </select>
                 <label for="categories">Kategori*</label>
             </div>
